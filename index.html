@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Quiz Music</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo">
+          <a href="/"
+            ><img
+              src="assets/icons/_QUIZMUSIC.png"
+              alt="logo"
+              class="navbar__logo--icon"
+          /></a>
+        </div>
+        <ul class="menu">
+          <li><a href="/" class="menu__items">Quiz</a></li>
+          <li><a href="assets/pages/pontuacoes.html" class="menu__items">Pontuações</a></li>
+          <li><a href="/" class="menu__items">Sobre Nós</a></li>
+        </ul>
+        <div class="icons">
+          <a href="#" aria-label="Download-app" class="icons__download"
+            >Baixar App</a
+          >
+          <button class="btn-menu"><img src="assets/icons/hamburguer.png" width="40px" alt="Menu Bar"></button>
+        </div>
+        
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <div class="hero__content__left">
+            <h1 class="hero__content__title">QUIZ MUZIK!</h1>
+            <div class="hero__content__text">
+              <p>
+                "Mostre que você é um verdadeiro amante da música! Teste seus
+                conhecimentos, desafie seus amigos e descubra quem domina os
+                maiores hits e clássicos de todos os tempos!"
+              </p>
+            </div>
+            <button id="playButton" class="start__btn__game anim"
+              >Jogar <img src="assets/icons/play.png" alt="play"
+            />
+          </button>
+          <div id="overlay"></div>
+          </div>
+          <div class="hero__content__right">
+            <img src="assets/img/back.png" alt="music_logo" />
+          </div>
+        </div>
+      </section>
+
+      <section class="my-app">
+        <div class="app__content">
+          <div class="app__content__left">
+            <img src="assets/img/mockup.png" alt="mockup" class="mockup">
+          </div>
+          <div class="app__content__right">
+            <h2 class="app__title">
+              Descubra o Ritmo: Baixe o aplicativo QUIZ MUZIK!
+            </h2>
+            <p class="app__text">
+              Teste seus conhecimentos sobre música, desafie seus amigos e prove
+              que você é o maior especialista em hits! Reconheça músicas em
+              segundos, desbloqueie conquistas e mergulhe no mundo dos ritmos e
+              melodias. Disponível para download agora mesmo. Está pronto para o
+              desafio?
+            </p>
+            <div class="btn__stores">
+              <a href="/" class="playstore-btn"> <img src="assets/icons/playstore.png" alt="play store">
+                <p> Baixar no </br> <span>Play Store </span></p>
+              </a>
+              <a href="/" class="applestore-btn"> <img src="assets/icons/appstore.png" alt="apple store">
+              <p> Baixar no </br> <span>Apple Store </span></p></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="game">
+
+        <div id="infoBoxModal" class="info_box">
+          <div class="info-title"><span>Regras do QUIZ-MUZIK!</span></div>
+          <div class="info-list">
+            <div class="info">1. Deves introduzir o teu nome de usuário.</div>
+            <div class="info">2. Clique no vídeo para reproduzir e preste atenção ao vídeo para completares a letra.</div>
+            <div class="info">3. Terás somente <span>15 Segundos</span> para analisar a letra da música e completar cada questão.</div>
+            <div class="info">4. Ao Errar <span>3 perguntas</span>, automaticamente perdes o jogo.</div>
+            <div class="info">4. Uma vez selecionada a resposta, já não pode ser desfeita.</div>
+            <div class="info">5. Não é possível selecionar várias opções de uma vez.</div>
+            <div class="info">6. Não podes sair do Quiz sem ter terminado de completar todas as questões.</div>
+            <div class="info">7. Ganharás pontos em cada pergunta acertada.</div>
+          </div>
+          <div class="buttons">
+            <button id="quit" class="quit">Sair</button>
+            <button class="continued">Continuar</button>
+          </div>
+        </div>
+      
+		<div class="user_box">
+			<div class="user-title"><span>Informação do Usuário</span></div>
+			<div class="user-list">
+
+          <label for="user-name">Digite seu nome:</label>
+          <input type="text" id="user-name" name="username" placeholder="Seu nome">
+          <span class="error-message"></span>
+
+			</div>
+			<div class="buttons">
+				<button class="back">Voltar</button>
+				<button class="restart">Começar</button>
+			</div>
+		</div>
+	    
+        <div class="quiz_box">
+          <header>
+            <div class="title">QUIZ-MUZIK!</div>
+            <div class="timer">
+              <div class="time_left_txt">Tempo Restante</div>
+              <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+          </header>
+          <section>
+            <div class="que_text">
+            
+            </div>
+            <div class="option_list">
+              
+            </div>
+          </section>
+         
+        
+          <footer>
+            <div class="total_que">
+              
+            </div>
+            <button class="next_btn">Próxima Questão</button>
+          </footer>
+        </div>
+         
+       
+        <div class="result_box">
+          <div class="icon">
+            <i class="fas fa-crown"></i>
+          </div>
+          <div class="complete_text">Acabaste de Completar o Quiz!</div>
+          <div class="score_text">
+           
+          </div>
+          <div class="buttons">
+            <button class="restart">Repetir o Quiz</button>
+            <button class="quit">Sair</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/question.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
